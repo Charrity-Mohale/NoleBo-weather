@@ -12,13 +12,20 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter city name.." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input type="search" placeholder="Enter city name.." required class="search-form-input"/>
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div class="weather-app-data">
+<div class="weather-app-data">
+  <div>
+<div class="weather-app-temperature-container">
+            <div class="weather-app-icon">☀️</div>
+            <div class="weather-app-temperature">20</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        
           <div>
             <h1 class="weather-app-city">Johannesburg</h1>
             <p class="weather-app-details">
@@ -29,11 +36,7 @@
               <strong>64%</strong>, Wind: <strong>5.72km/h</strong>
             </p>
           </div>
-          <div class="weather-app-temperature-container">
-            <div id="icon">☀️</div>
-            <div class="weather-app-temperature">20</div>
-            <div class="weather-app-unit">°C</div>
-          </div>
+          
         </div>
       </main>
       <footer>
