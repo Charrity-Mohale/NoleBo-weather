@@ -12,8 +12,8 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
-          <input type="search" placeholder="Enter city name.." required class="search-form-input"/>
+        <form class="search-form" id="search-form">
+          <input type="search" placeholder="Enter city name.." required class="search-form-input" id="search-form-input"/>
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
@@ -27,7 +27,7 @@
           </div>
         
           <div>
-            <h1 class="weather-app-city">Johannesburg</h1>
+            <h1 class="weather-app-city" id="city" >Johannesburg</h1>
             <p class="weather-app-details">
               <span>Wednesday 21:37</span>,
               <span>clear sky</span>
@@ -53,5 +53,6 @@
         <a href="https://nolebo.netlify.app/" target="_blank">Netlify</a>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
