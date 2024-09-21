@@ -6,10 +6,9 @@ function updateWeather(response) {
   let city = document.querySelector("#city");
   let time = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-    let icon = document.querySelector("#icon");
-        
-       icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
- 
+  let icon = document.querySelector("#icon");
+
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 
   temperature.innerHTML = Math.round(response.data.temperature.current);
   condition.innerHTML = response.data.condition.description;
@@ -55,3 +54,27 @@ function searchCityFunction(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCityFunction);
+
+function displayForecast() {
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">🌤️</div>
+      <div class="weather-forecast-temperatures">
+   <div class="weather-forecast-temperature"><strong class="strong">16°C </strong> </div>
+   <div class="weather-forecast-temperature">13°C</div>
+    </div>
+    </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
