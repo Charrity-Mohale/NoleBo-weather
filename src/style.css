@@ -1,6 +1,10 @@
 body {
-  background-image: url("../images/night-sky.jpg");
-  background-size: cover;
+  background: linear-gradient(
+    177.9deg,
+    rgb(58, 62, 88) 3.6%,
+    rgb(119, 127, 148) 105.8%
+  );
+
   font-family: "Roboto", sans-serif;
 }
 header {
@@ -100,7 +104,6 @@ p {
   height: 48px;
   margin: 0 auto;
   display: block;
-  
 }
 .weather-forecast-temperatures {
   display: flex;
